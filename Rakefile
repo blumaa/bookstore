@@ -19,8 +19,9 @@ namespace :db do
       File.delete(connection_details.fetch('database')) if File.exist?(connection_details.fetch('database'))
     end
   
-    desc "start console"
+  end
+
+  desc "start console"
     task :console do
       Pry.start
     end
-  end
